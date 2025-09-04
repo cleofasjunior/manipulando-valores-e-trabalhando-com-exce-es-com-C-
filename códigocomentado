@@ -1,0 +1,28 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Lê a linha de entrada contendo nome, quarto e diárias.
+        string input = Console.ReadLine();
+
+        // Divide a string de entrada em um array, usando a vírgula como separador.
+        string[] parts = input.Split(',');
+
+        // Extrai o nome do hóspede, removendo espaços extras.
+        string guestName = parts[0].Trim();
+
+        // Converte a string do número do quarto para um inteiro.
+        int roomNumber = int.Parse(parts[1].Trim());
+
+        // Converte a string da quantidade de diárias para um inteiro.
+        int days = int.Parse(parts[2].Trim());
+
+        // Calcula o valor total multiplicando as diárias pelo valor fixo (150).
+        int totalValue = days * 150;
+
+        // Imprime a mensagem final formatada, inserindo os valores calculados.
+        Console.WriteLine($"{guestName} vai se hospedar no quarto {roomNumber} por R${totalValue}");
+    }
+}
