@@ -1,0 +1,28 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string input = Console.ReadLine();
+        string[] parts = input.Split(',');
+
+        string guestName = parts[0].Trim();
+        int roomNumber = int.Parse(parts[1].Trim());
+        int days = int.Parse(parts[2].Trim());
+
+        int totalValue = days * 150;
+
+        Console.WriteLine($"{guestName} vai se hospedar no quarto {roomNumber} por R${totalValue}");
+    }
+}
+
+/*
+### Exemplos de Entradas e Saídas
+
+| Entrada de Console | Saída Esperada |
+| :---: | :---: |
+| Aline, 101, 3 | Aline vai se hospedar no quarto 101 por R$450 |
+| Marina, 102, 1 | Marina vai se hospedar no quarto 102 por R$150 |
+| Carlos, 203, 2 | Carlos vai se hospedar no quarto 203 por R$300 |
+*/
